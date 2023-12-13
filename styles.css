@@ -1,0 +1,119 @@
+body{
+    background-color: #4e3e7a82;
+    margin:0;
+}
+main{
+    margin:0.75rem;
+}
+h1,h2,h3,h4, a, label{
+    font-family: 'Oswald', sans-serif;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+hr{
+    border: 2px solid #5530ba;
+}
+footer{
+    display:flex;
+    position:fixed;
+    justify-content: center;
+    bottom:2%;
+    width:100%;
+}
+header{
+    top:0%;
+    width:100%;
+    background-color: #a59c39;
+    padding:5px;
+    height:5rem;
+    display:grid;
+    grid-template-columns: 32% 34% 34%;
+    grid-template-rows: 33% 33% 34%;
+    font-size: larger;
+}
+nav{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+nav a{
+    padding:4px;
+}
+header img{
+    max-height: 98%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+header a, footer a{
+    text-decoration: none;
+    transition: background-color 0.1s ease-in;
+    color:black;
+    text-align: center;
+}
+header a:hover, footer a:hover{
+    background-color: #fae502;
+}
+footer a{
+    padding:8px;
+}
+.button{
+    background-color: #a59c39;
+    vertical-align: middle;
+    text-decoration: none;
+    color:black;
+}
+.horizontal{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.cart-button{
+    display:flex;
+    background-color: #4402fa;
+    margin:8px;
+    padding:8px;
+    min-width:4.5rem;
+    max-width:60%;
+    color:#fff;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    transition: background-color 0.2s ease-in;
+    transition: color 0.2s ease-out;
+}
+.cart-button:hover{
+    background-color: white;
+    color:#4402fa;
+}
+form input[type=text]{
+    width:90%;
+}
+#shipping, #message{
+    min-height: 11rem;
+}
+.reset{
+    background-color: red;
+}
+.catalog{
+    display:flex;
+    flex-flow: row wrap;
+}
+@media (min-width:1000px){
+    nav{
+        width:80%;
+    }
+    header{
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content:center;
+    }
+    nav{
+        display:flex;
+        justify-content: space-evenly;
+    }
+}
