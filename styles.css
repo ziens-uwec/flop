@@ -3,8 +3,7 @@ body{
     margin:0;
 }
 main{
-    margin:0.75rem;
-    margin-right:3rem;
+    margin: 0 0.75rem 0 0.5rem;
 }
 h1,h2,h3,h4, a, label{
     font-family: 'Oswald', sans-serif;
@@ -30,13 +29,17 @@ header{
     padding-bottom: 5px;
     height:5rem;
     display:grid;
-    grid-template-columns: 32% 34% 34%;
-    grid-template-rows: 33% 33% 34%;
+    grid-template-columns: 26% 37% 37%;
+    grid-template-rows: 100%;
     font-size: larger;
 }
 nav{
+    display:flex;
+    flex-flow: row wrap;
     grid-column-start: 2;
     grid-column-end: 4;
+    justify-content: space-evenly;
+    align-items:center;
 }
 nav a{
     padding:4px;
@@ -48,8 +51,6 @@ header img{
     max-height: 98%;
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 4;
     margin-left:1rem;
 }
 footer a{
@@ -96,8 +97,8 @@ footer a{
     display:flex;
     background-color: #4402fa;
     padding:8px;
-    min-width:4rem;
-    max-width:50%;
+    min-width:2rem;
+    max-width:25%;
     color:#fff;
     text-decoration: none;
     text-align: center;
@@ -116,18 +117,53 @@ form input[type=text]{
 #shipping, #message{
     min-height: 11rem;
 }
+/* 
+CATALOG GRID 
+*/
 .catalog{
     display:flex;
     flex-flow: row wrap;
+    justify-content: center;
+    margin: 1rem 0 0 0;
 }
 .catalog-item{
     background-color: #a59c39;
     width:38vw;
-    height:29vh;
+    height:30vh;
     margin:0.25rem;
+    padding:8px;
     max-width: 300px;
-    max-height: 280px;
+    max-height: 320px;
+    box-shadow: 2px 2px 3px black;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70% 30%;
 }
+.catalog-item img{
+    max-width: 90%;
+    max-height:100%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.catalog-item button{
+    max-width: 100%;
+    max-height: 2.5rem;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.catalog-item p{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+/* 
+END CATALOG GRID 
+*/
 @media (min-width:1000px){
     nav{
         width:80%;
@@ -142,5 +178,8 @@ form input[type=text]{
     }
     header h1{
         padding-right: 2rem;
+    }
+    main{
+        margin:0.75rem 3rem 0.75rem 2rem;
     }
 }
