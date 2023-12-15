@@ -88,6 +88,9 @@ footer a{
 /*
 END HEADER AND FOOTER STYLES
 */
+/*
+BUTTON AND INPUT STYLES 
+*/
 button{
     border:none;
     font-family: 'Oswald', sans-serif;
@@ -146,6 +149,9 @@ form input[type=text]{
 #shipping, #message{
     min-height: 11rem;
 }
+/*
+END BUTTON AND INPUT STYLES
+*/
 /* 
 CATALOG GRID 
 */
@@ -206,6 +212,8 @@ td{
     text-align: center;
 }
 /* END CART TABLE */
+
+/* ---- DESKTOP STYLING ---- */
 @media (min-width:1000px){
     nav{
         width:80%;
@@ -225,3 +233,4 @@ td{
         margin:0.75rem 3rem 0.75rem 2rem;
     }
 }
+/* ---- END DESKTOP STYLING ---- */
